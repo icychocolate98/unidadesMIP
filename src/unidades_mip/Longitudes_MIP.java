@@ -10,5 +10,10 @@ public class Longitudes_MIP extends UnidadesApp_MIP{
         return millas;
     }
 
+    public static double millasAKm(double millas) {
+        kilometros = millas / 1.609344;
+        return kilometros;
+    }
+
 
 }
