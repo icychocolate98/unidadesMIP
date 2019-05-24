@@ -15,5 +15,10 @@ public class Longitudes_MIP extends UnidadesApp_MIP{
         return kilometros;
     }
 
+    public static double millasAPulgadas(double millas) {
+        pulgadas = millas * 63360;
+        return pulgadas;
+    }
+
 
 }
