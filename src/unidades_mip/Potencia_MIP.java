@@ -15,5 +15,10 @@ public class Potencia_MIP extends UnidadesApp_MIP{
         return kw;
     }
 
+    public static double kwAFtlb(double kw) {
+        ftlb = kw * 737.562149;
+        return ftlb;
+    }
+
     
 }
