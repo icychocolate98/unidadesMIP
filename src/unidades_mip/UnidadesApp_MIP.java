@@ -19,6 +19,10 @@ public class UnidadesApp_MIP {
     static double kw = 0.0;
     static double cv = 0.0;
     static double ftlb = 0.0;
+    //UNIDADES TEMPERATURA
+    static double celsius = 0.0;
+    static double fahrenheit = 0.0;
+    static double kelvin = 0.0;
 
     /**
      * @param args the command line arguments
@@ -102,13 +106,45 @@ public class UnidadesApp_MIP {
                     }
                     break;
                 case 3:
-                    //menuTransformarTemperatura();
-                    break;
+                    menuTransformarTemperatura();
+                    System.out.println("Introduzca una opcion.");
+                    opcion = leer.nextInt();
+                    switch (opcion) {
+                        case 1:
+                            System.out.println("Introduzca los Celsius");
+                            celsius = leer.nextInt();
+                            fahrenheit = Longitudes_MIP.celsiusAFahrenheit(celsius);
+                            System.out.println(celsius + " celsius son: " + df.format(fahrenheit) + " fahrenheit");
+                            break;
+                        case 2:
+                            System.out.println("Introduzca los fahrenheit");
+                            fahrenheit = leer.nextInt();
+                            celsius = Longitudes_MIP.fahrenheitACelsius(fahrenheit);
+                            System.out.println(fahrenheit + " fahrenheit son: " + df.format(celsius) + " celsius");
+                            break;
+                        case 3:
+                            System.out.println("Introduzca los celsius");
+                            celsius = leer.nextInt();
+                            kelvin = Longitudes_MIP.celsiusAKelvin(celsius);
+                            System.out.println(celsius + " celsius son: " + df.format(kelvin) + " kelvin");
+                            break;
+                        case 4:
+                            System.out.println("Introduzca los kelvin");
+                            kelvin = leer.nextInt();
+                            celsius = Longitudes_MIP.kelvinACelsius(kelvin);
+                            System.out.println(kelvin + " kelvin son: " + df.format(celsius) + " celsius");
+                            break;
+                        case 5:
+                            mostrarMenuPrincipal();
+                            break;
+
+                    }
                 case 4:
                     break;
             }
 
         } while (op != 4);
+
     }
 
     public static int mostrarMenuPrincipal() {
@@ -137,6 +173,15 @@ public class UnidadesApp_MIP {
         System.out.println("3.-Transformar KW a Ft/Lb");
         System.out.println("4.-Transformar Ft/Lb a KW");
         System.out.println("5.-Volver a menú anterior");
+
+    }
+
+    public static int menuTransformarTemperatura() {
+        System.out.println("1.-Transformar Celsius a Fahrenheit");
+        System.out.println("2.-Transformar Fahrenheit a Celsius");
+        System.out.println("3.-Transformar Celsius a Kelvin");
+        System.out.println("4.-Transformar Kelvin a Celsius");
+        System.out.println("5.-Volver al menú anterior");
 
     }
 }
