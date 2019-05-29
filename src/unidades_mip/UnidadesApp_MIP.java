@@ -15,6 +15,10 @@ public class UnidadesApp_MIP {
     static double kilometros = 0.0;
     static double millas = 0.0;
     static double pulgadas = 0.0;
+    //Unidades potencia
+    static double kw = 0.0;
+    static double cv = 0.0;
+    static double ftlb = 0.0;
 
     /**
      * @param args the command line arguments
@@ -58,11 +62,44 @@ public class UnidadesApp_MIP {
                             System.out.println(pulgadas + " pulgadas son: " + df.format(millas) + " millas");
                             break;
                         case 5:
+                            mostrarMenuPrincipal();
                             break;
 
-                    }                   
+                    }
                 case 2:
-                    // menuTransformarPotencia();
+                    menuTransformarPotencia();
+                    System.out.println("Introduzca una opcion.");
+                    opcion = leer.nextInt();
+                    switch (opcion) {
+                        case 1:
+                            System.out.println("Introduzca los Kw");
+                            kw = leer.nextInt();
+                            cv = Longitudes_MIP.kwACv(kw);
+                            System.out.println(kw + " kw son: " + df.format(cv) + " cv");
+                            break;
+                        case 2:
+                            System.out.println("Introduzca los cv");
+                            cv = leer.nextInt();
+                            kw = Longitudes_MIP.cvAKw(cv);
+                            System.out.println(cv + " cv son: " + df.format(kw) + " kw");
+                            break;
+                        case 3:
+                            System.out.println("Introduzca los kw");
+                            kw = leer.nextInt();
+                            ftlb = Longitudes_MIP.kwAFtlb(kw);
+                            System.out.println(kw + " kw son: " + df.format(ftlb) + " ftlb");
+                            break;
+                        case 4:
+                            System.out.println("Introduzca los ftlb");
+                            ftlb = leer.nextInt();
+                            kw = Longitudes_MIP.ftlbAKw(ftlb);
+                            System.out.println(ftlb + " ftlb son: " + df.format(kw) + " kw");
+                            break;
+                        case 5:
+                            mostrarMenuPrincipal();
+                            break;
+
+                    }
                     break;
                 case 3:
                     //menuTransformarTemperatura();
@@ -90,7 +127,16 @@ public class UnidadesApp_MIP {
         System.out.println("2.-Transformar Millas a Kms");
         System.out.println("3.-Transformar Millas a pulgadas");
         System.out.println("4.-Transformar Pulgadas a Millas");
-        System.out.println("5.-SALIR");
+        System.out.println("5.-Volver al menú anterior");
+
+    }
+
+    public static int menuTransformarPotencia() {
+        System.out.println("1.-Transformar KW a CV");
+        System.out.println("2.-Transformar CV a KW");
+        System.out.println("3.-Transformar KW a Ft/Lb");
+        System.out.println("4.-Transformar Ft/Lb a KW");
+        System.out.println("5.-Volver a menú anterior");
 
     }
 }
