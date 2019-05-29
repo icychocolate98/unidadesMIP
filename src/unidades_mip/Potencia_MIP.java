@@ -10,5 +10,10 @@ public class Potencia_MIP extends UnidadesApp_MIP{
         return cv;
     }
 
+    public static double cvAKw(double cv) {
+        kw = cv / 1.341;
+        return kw;
+    }
+
     
 }
