@@ -15,5 +15,11 @@ public class Temperatura_MIP extends UnidadesApp_MIP{
         celsius = (fahrenheit - 32) * 5/9;
         return celsius;
     }
+
+    public static double celsiusAKelvin(double celsius) {
+        kelvin = celsius + 273.15;
+        return kelvin;
+    }
+
     
 }
