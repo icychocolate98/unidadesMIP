@@ -78,25 +78,25 @@ public class UnidadesApp_MIP {
                         case 1:
                             System.out.println("Introduzca los Kw");
                             kw = leer.nextInt();
-                            cv = Longitudes_MIP.kwACv(kw);
+                            cv = Potencia_MIP.kwACv(kw);
                             System.out.println(kw + " kw son: " + df.format(cv) + " cv");
                             break;
                         case 2:
                             System.out.println("Introduzca los cv");
                             cv = leer.nextInt();
-                            kw = Longitudes_MIP.cvAKw(cv);
+                            kw = Potencia_MIP.cvAKw(cv);
                             System.out.println(cv + " cv son: " + df.format(kw) + " kw");
                             break;
                         case 3:
                             System.out.println("Introduzca los kw");
                             kw = leer.nextInt();
-                            ftlb = Longitudes_MIP.kwAFtlb(kw);
+                            ftlb = Potencia_MIP.kwAFtlb(kw);
                             System.out.println(kw + " kw son: " + df.format(ftlb) + " ftlb");
                             break;
                         case 4:
                             System.out.println("Introduzca los ftlb");
                             ftlb = leer.nextInt();
-                            kw = Longitudes_MIP.ftlbAKw(ftlb);
+                            kw = Potencia_MIP.ftlbAKw(ftlb);
                             System.out.println(ftlb + " ftlb son: " + df.format(kw) + " kw");
                             break;
                         case 5:
@@ -113,25 +113,25 @@ public class UnidadesApp_MIP {
                         case 1:
                             System.out.println("Introduzca los Celsius");
                             celsius = leer.nextInt();
-                            fahrenheit = Longitudes_MIP.celsiusAFahrenheit(celsius);
+                            fahrenheit = Temperatura_MIP.celsiusAFahrenheit(celsius);
                             System.out.println(celsius + " celsius son: " + df.format(fahrenheit) + " fahrenheit");
                             break;
                         case 2:
                             System.out.println("Introduzca los fahrenheit");
                             fahrenheit = leer.nextInt();
-                            celsius = Longitudes_MIP.fahrenheitACelsius(fahrenheit);
+                            celsius = Temperatura_MIP.fahrenheitACelsius(fahrenheit);
                             System.out.println(fahrenheit + " fahrenheit son: " + df.format(celsius) + " celsius");
                             break;
                         case 3:
                             System.out.println("Introduzca los celsius");
                             celsius = leer.nextInt();
-                            kelvin = Longitudes_MIP.celsiusAKelvin(celsius);
+                            kelvin = Temperatura_MIP.celsiusAKelvin(celsius);
                             System.out.println(celsius + " celsius son: " + df.format(kelvin) + " kelvin");
                             break;
                         case 4:
                             System.out.println("Introduzca los kelvin");
                             kelvin = leer.nextInt();
-                            celsius = Longitudes_MIP.kelvinACelsius(kelvin);
+                            celsius = Temperatura_MIP.kelvinACelsius(kelvin);
                             System.out.println(kelvin + " kelvin son: " + df.format(celsius) + " celsius");
                             break;
                         case 5:
@@ -158,7 +158,7 @@ public class UnidadesApp_MIP {
         return op;
     }
 
-    public static int menuTransformarLongitud() {
+    public static void menuTransformarLongitud() {
         System.out.println("1.-Transformar Kms a Millas");
         System.out.println("2.-Transformar Millas a Kms");
         System.out.println("3.-Transformar Millas a pulgadas");
@@ -167,7 +167,7 @@ public class UnidadesApp_MIP {
 
     }
 
-    public static int menuTransformarPotencia() {
+    public static void menuTransformarPotencia() {
         System.out.println("1.-Transformar KW a CV");
         System.out.println("2.-Transformar CV a KW");
         System.out.println("3.-Transformar KW a Ft/Lb");
@@ -176,7 +176,7 @@ public class UnidadesApp_MIP {
 
     }
 
-    public static int menuTransformarTemperatura() {
+    public static void menuTransformarTemperatura() {
         System.out.println("1.-Transformar Celsius a Fahrenheit");
         System.out.println("2.-Transformar Fahrenheit a Celsius");
         System.out.println("3.-Transformar Celsius a Kelvin");
