@@ -21,5 +21,9 @@ public class Temperatura_MIP extends UnidadesApp_MIP{
         return kelvin;
     }
 
+    public static double kelvinACelsius(double kelvin) {
+        celsius = kelvin - 273.15;
+        return celsius;
+    }
     
 }
